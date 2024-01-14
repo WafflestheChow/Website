@@ -3,19 +3,117 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Hello Bulma!</title>
+    <title>About me</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
+    <script src="https://kit.fontawesome.com/61cb519689.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="/styles/helpers.css">
 </head>
 <body>
-<section class="section">
+<nav>
+<div id="navbarExampleTransparentExample" class="navbar-menu">
+    <div class="navbar-start">
+        <a class="navbar-item" href="/index.html">
+            Home
+        </a>
+        <div class="navbar-item has-dropdown is-hoverable">
+            <a class="navbar-link" href="">
+                Pets
+            </a>
+            <div class="navbar-dropdown is-boxed">
+
+                <a class="navbar-item" href="churro.html">
+                    Churro
+                </a>
+                <a class="navbar-item" href="coconut.html">
+                    Coconut
+                </a>
+                <a class="navbar-item" href="waffles.html">
+                    Waffles
+                </a>
+            </div>
+        </div>
+
+        <a class="navbar-item" href="assignments.html">
+            Assignments
+        </a>
+
+        <a class="navbar-item" href="projects.html">
+            Projects
+        </a>
+
+        <a class="navbar-item" href="aboutme.html">
+            About Me
+        </a>
+
+    </div>
+
+    <div class="navbar-end">
+        <div class="navbar-item">
+            <div class="field is-grouped">
+                <!-- Your existing buttons -->
+                <p class="control">
+                    <a class="button is-link" data-social-network="GitHub" data-social-action="_blank" data-social-target="_blank" target="_blank" href="https://github.com/WafflestheChow">
+                        <span class="icon">
+                            <i class="fab fa-github"></i>
+                        </span>
+                        <span>GitHub</span>
+                    </a>
+                </p>
+                <p class="control">
+                    <a class="button is-link" href="https://www.petfinder.com/">
+                        <span class="icon">
+                            <i class="fas fa-dog"></i>
+                        </span>
+                        <span>Adopt a pet</span>
+                    </a>
+                </p>
+                <!-- Toggle theme button -->
+                <label class="switch">
+                    <input type="checkbox" id="theme-toggle">
+                    <span class="slider round">
+                        <!-- Light Mode Icons -->
+                        <img src="/images/switch/sun.svg" class="icon light-mode-icon" alt="icon">
+                        <img src="/images/switch/moon.svg" class="icon light-mode-icon">
+
+                        <!-- Dark Mode Icons -->
+                        <img src="/images/switch/sun-white.svg" class="icon dark-mode-icon" style="display: none;">
+                        <img src="/images/switch/moon-white.svg" class="icon dark-mode-icon" style="display: none;">
+                    </span>
+                </label>
+            </div>
+        </div>
+    </div>
+</div>
+</nav>
+
+<section class="section is-large">
     <div class="container">
-        <h1 class="title">
-            Hello World
-        </h1>
-        <p class="subtitle">
-            Test Page Please add content
-        </p>
+        <div class="columns is-vcentered">
+            <!-- This will remove the offset and make the column wider -->
+            <div class="column is-7-tablet is-7-desktop">
+                <h1 class="title is-size-1">
+                    Place holder for Projects
+                </h1>
+                <h2 class="subtitle is-2 mt-6">
+                    Placeholder for Projects
+                </h2>
+                <p class="mt-6">Get in touch 👉 nick.tsang5@gmail.com</p>
+            </div>
+            <div class="column is-6">
+                <!-- Your form goes here -->
+                <div class="field">
+                    <label class="label">Name</label>
+                    <!-- ... -->
+                </div>
+            </div>
+        </div>
     </div>
 </section>
+
+
+<p>placeholder</p>
+
+<script src="/js/index.js"></script>
+<script src="/js/lightSwitch.js"></script>
 </body>
 </html>
