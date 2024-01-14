@@ -1,0 +1,153 @@
+/* Base styles for the switch */
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 60px;
+    height: 34px;
+}
+
+/* Hides the input */
+.switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+/* Style for the slider */
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: #ccc;
+    transition: .4s;
+    border-radius: 34px;
+}
+
+.slider:before {
+    position: absolute;
+    content: "";
+    height: 26px;
+    width: 26px;
+    left: 4px;
+    bottom: 4px;
+    background-color: white;
+    transition: .4s;
+    border-radius: 50%;
+}
+
+/* Positioning the icons */
+.icon {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    height: 20px;
+    width: 20px;
+}
+
+/* Initial visibility of icons */
+.light-mode-icon {
+    left: 8px; /* Position the sun icon inside the slider */
+    display: block; /* Show by default */
+}
+
+.dark-mode-icon {
+    right: 8px; /* Position the moon icon inside the slider */
+    display: none; /* Hide by default */
+}
+
+/* When the checkbox is checked (dark mode), move the slider to the right */
+input:checked + .slider:before {
+    transform: translateX(26px);
+}
+
+/* When in dark mode, show the white icons and hide the colored ones */
+.dark-mode .light-mode-icon {
+    display: none;
+}
+
+.dark-mode .dark-mode-icon {
+    display: block;
+}
+
+/* Change the background of slider to indicate active state */
+input:checked + .slider {
+    background-color: #555;
+}
+
+
+/* Style for the icons inside the switch */
+.icon {
+    display: none; /* Hide all icons by default */
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+/* Show appropriate icons for light mode */
+.light-mode-icon {
+    display: block; /* Show */
+    left: 8px; /* Position the sun icon on the left */
+}
+
+/* Hide dark mode icons by default */
+.dark-mode-icon {
+    right: 8px; /* Position the moon icon on the right */
+}
+
+/* When the dark mode is active, switch the icons */
+body.dark-mode .light-mode-icon {
+    display: none; /* Hide the light mode sun icon */
+}
+
+body.dark-mode .dark-mode-icon {
+    display: block; /* Show the dark mode moon icon */
+}
+
+/* Additional styles to make the switch look like a toggle */
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 50px; /* Width of the switch */
+    height: 24px; /* Height of the switch */
+}
+
+.switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: #ccc; /* Background of the slider */
+    transition: 0.4s;
+    border-radius: 34px;
+}
+
+.slider:before {
+    position: absolute;
+    content: "";
+    height: 20px;
+    width: 20px;
+    left: 2px;
+    bottom: 2px;
+    background-color: white;
+    transition: 0.4s;
+    border-radius: 50%;
+}
+
+/* Color changes for the slider when dark mode is active */
+input:checked + .slider {
+    background-color: #555; /* Darker background for the slider */
+}
+
+input:checked + .slider:before {
+    transform: translateX(26px);} /* Move
