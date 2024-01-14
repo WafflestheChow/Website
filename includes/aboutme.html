@@ -6,98 +6,153 @@
     <title>About me</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
     <script src="https://kit.fontawesome.com/61cb519689.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="/styles/helpers.css">
 </head>
 <body>
 
-<nav class="navbar is-transparent">
-    <div class="navbar-brand has-text-grey">
-        <a class ="navbar-item" href="index.html">
-            <i class="fa-solid fa-n"></i>
-            <i class="fa-solid fa-t"></i>
-            <i class="fas fa-dog"></i>
+<div id="navbarExampleTransparentExample" class="navbar-menu">
+    <div class="navbar-start">
+        <a class="navbar-item" href="/index.html">
+            Home
         </a>
-        <div class="navbar-burger" data-target="navbarExampleTransparentExample">
-            <span></span>
-            <span></span>
-            <span></span>
+        <div class="navbar-item has-dropdown is-hoverable">
+            <a class="navbar-link" href="">
+                Pets
+            </a>
+            <div class="navbar-dropdown is-boxed">
+
+                <a class="navbar-item" href="churro.html">
+                    Churro
+                </a>
+                <a class="navbar-item" href="coconut.html">
+                    Coconut
+                </a>
+                <a class="navbar-item" href="waffles.html">
+                    Waffles
+                </a>
+            </div>
         </div>
+
+        <a class="navbar-item" href="assignments.html">
+            Assignments
+        </a>
+
+        <a class="navbar-item" href="projects.html">
+            Projects
+        </a>
+
+        <a class="navbar-item" href="aboutme.html">
+            About Me
+        </a>
+
     </div>
 
-    <div id="navbarExampleTransparentExample" class="navbar-menu">
-        <div class="navbar-start">
-            <a class="navbar-item" href="../index.html">
-                Home
-            </a>
-            <div class="navbar-item has-dropdown is-hoverable">
-                <a class="navbar-link" href="#">
-                    Pets
-                </a>
-                <div class="navbar-dropdown is-boxed">
-                    <a class="navbar-item" href="churro.html">
-                        Churro
-                    </a>
-                    <a class="navbar-item" href="coconut.html">
-                        Coconut
-                    </a>
-                    <a class="navbar-item" href="waffles.html">
-                        Waffles
-                    </a>
-                </div>
-            </div>
-
-            <a class="navbar-item" href="assignments.html">
-                Assignments
-            </a>
-
-            <a class="navbar-item">
-                Projects
-            </a>
-
-            <a class="navbar-item" href="aboutme.html">
-                About Me
-            </a>
-
-
-
-        </div>
-
-        <div class="navbar-end">
-            <div class="navbar-item">
-                <div class="field is-grouped">
-                    <p class="control">
-                        <a class="button is-primary" data-social-network="GitHub" data-social-action="_blank" data-social-target="_blank" target="_blank" href="https://github.com/WafflestheChow">
+    <div class="navbar-end">
+        <div class="navbar-item">
+            <div class="field is-grouped">
+                <!-- Your existing buttons -->
+                <p class="control">
+                    <a class="button is-link" data-social-network="GitHub" data-social-action="_blank" data-social-target="_blank" target="_blank" href="https://github.com/WafflestheChow">
                             <span class="icon">
                                 <i class="fab fa-github"></i>
                             </span>
-                            <span>
-                                Github
-                            </span>
-                        </a>
-                    </p>
-                    <p class="control">
-                        <a class="button is-primary" href="https://www.petfinder.com/">
+                        <span>GitHub</span>
+                    </a>
+                </p>
+                <p class="control">
+                    <a class="button is-link" href="https://www.petfinder.com/">
                             <span class="icon">
                                 <i class="fas fa-dog"></i>
                             </span>
-                            <span>Adopt a pet</span>
-                        </a>
-                    </p>
+                        <span>Adopt a pet</span>
+                    </a>
+                </p>
+                <!-- Toggle theme button -->
+                <label class="switch">
+                    <input type="checkbox" id="theme-toggle">
+                    <span class="slider round">
+                            <!-- Light Mode Icons -->
+                            <img src="/images/switch/sun.svg" class="icon light-mode-icon">
+                            <img src="/images/switch/moon.svg" class="icon light-mode-icon">
+
+                        <!-- Dark Mode Icons -->
+                        <img src="/images/switch/sun-white.svg" class="icon dark-mode-icon" style="display: none;">
+                        <img src="/images/switch/moon-white.svg" class="icon dark-mode-icon" style="display: none;">
+                    </span>
+                </label>
+            </div>        </div>
+    </div>
+</div>
+</nav>
+
+
+<section class="section is-large">
+    <div class="container">
+        <div class="columns is-vcentered">
+            <!-- This will remove the offset and make the column wider -->
+            <div class="column is-7-tablet is-7-desktop">
+                <h1 class="title is-size-1">
+                    About me
+                </h1>
+                <h2 class="subtitle is-2 mt-6">
+                    I'm Nick Tsang, a design-minded front-end software engineer focused on building beautiful interfaces & experiences
+                </h2>
+                <p class="mt-6">Keep in touch</p>
+            </div>
+            <div class="column is-6">
+                <!-- Your form goes here -->
+                <div class="field">
+                    <label class="label">Name</label>
+                    <div class="control">
+                        <input class="input" type="text" placeholder="Enter your name">
+                    </div>
+                </div>
+                <div class="field">
+                    <label class="label">Email</label>
+                    <div class="control has-icons-left has-icons-right">
+                        <input class="input is-danger" type="email" placeholder="Email input" value="hello@">
+                        <span class="icon is-small is-left">
+                            <i class="fas fa-envelope"></i>
+                        </span>
+                        <span class="icon is-small is-right">
+                            <i class="fas fa-exclamation-triangle"></i>
+                        </span>
+                    </div>
+                    <p class="help is-danger">This email is invalid</p>
+                </div>
+
+                <div class="field">
+                    <label class="label">Message</label>
+                    <div class="control">
+                        <textarea class="textarea" placeholder="Textarea"></textarea>
+                    </div>
+                </div>
+
+
+                <div class="field">
+                    <div class="control">
+                        <label class="checkbox">
+                            <input type="checkbox">
+                            I agree to the <a href="#">terms and conditions</a>
+                        </label>
+                    </div>
+                </div>
+                <div class="field is-grouped">
+                    <div class="control">
+                        <button class="button is-link">Submit</button>
+                    </div>
+                    <div class="control">
+                        <button class="button is-link is-light">Cancel</button>
+                    </div>
                 </div>
             </div>
         </div>
     </div>
-</nav>
-
-
-<section class="section">
-    <div class="container">
-        <h1 class="title">
-            Hello World Deez
-        </h1>
-        <p class="subtitle">
-            Generic About me
-        </p>
-    </div>
 </section>
+
+
+
+<script src="/js/index.js"></script>
+<script src="/js/lightSwitch.js"></script>
 </body>
 </html>
