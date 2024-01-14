@@ -7,6 +7,28 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
     <script src="https://kit.fontawesome.com/61cb519689.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="/styles/helpers.css">
+    <style>
+        :root {
+            --text-color-light: #363636; /* Dark text for light background */
+            --text-color-dark: #f5f5f5; /* Light text for dark background */
+            --background-color-light: #f5f5f5; /* Light background */
+            --background-color-dark: #363636; /* Dark background */
+        }
+
+        body.light-mode {
+            background-color: var(--background-color-light);
+            color: var(--text-color-light);
+        }
+
+        body.dark-mode {
+            background-color: var(--background-color-dark);
+            color: var(--text-color-dark);
+        }
+
+        .label, .help {
+            color: inherit; /* Ensures the text color matches the body's text color */
+        }
+    </style>
 </head>
 <body>
 
@@ -95,9 +117,9 @@
                     About me
                 </h1>
                 <h2 class="subtitle is-2 mt-6">
-                    I'm Nick Tsang, a design-minded front-end software engineer focused on building beautiful interfaces & experiences
+                    I'm Nick and when I'm not in front of a computer screen, I enjoy traveling, snowboarding or spending time with the dogs.
                 </h2>
-                <p class="mt-6">Keep in touch</p>
+                <p class="mt-6">Let's Keep in touch</p>
             </div>
             <div class="column is-6">
                 <!-- Your form goes here -->
@@ -110,7 +132,7 @@
                 <div class="field">
                     <label class="label">Email</label>
                     <div class="control has-icons-left has-icons-right">
-                        <input class="input is-danger" type="email" placeholder="Email input" value="hello@">
+                        <input class="input is-danger" type="email" placeholder="Email address" value="">
                         <span class="icon is-small is-left">
                             <i class="fas fa-envelope"></i>
                         </span>
