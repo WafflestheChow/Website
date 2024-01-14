@@ -9,57 +9,70 @@
 </head>
 <body>
 
-<nav class="navbar" role="navigation" aria-label="main navigation">
-    <div class="navbar-brand">
+<div id="navbarExampleTransparentExample" class="navbar-menu">
+    <div class="navbar-start">
         <a class="navbar-item" href="../index.html">
-            <i class="fa-solid fa-n"></i>
-            <i class="fa-solid fa-t"></i>
-            <i class="fas fa-dog"></i>
+            Home
         </a>
+        <div class="navbar-item has-dropdown is-hoverable">
+            <a class="navbar-link" href="#">
+                Pets
+            </a>
+            <div class="navbar-dropdown is-boxed">
+                <a class="navbar-item" href="churro.html">
+                    Churro
+                </a>
+                <a class="navbar-item" href="coconut.html">
+                    Coconut
+                </a>
+                <a class="navbar-item" href="waffles.html">
+                    Waffles
+                </a>
+            </div>
+        </div>
+
+        <a class="navbar-item" href="assignments.html">
+            Assignments
+        </a>
+
+        <a class="navbar-item">
+            Projects
+        </a>
+
+        <a class="navbar-item" href="aboutme.html">
+            About Me
+        </a>
+
+
+
     </div>
 
-    <div id="navbarExampleTransparentExample" class="navbar-menu">
-        <div class="navbar-start">
-            <a class="navbar-item" href="../index.html">
-                Home
-            </a>
-            <div class="navbar-item has-dropdown is-hoverable">
-                <a class="navbar-link" href="#">
-                    Course
-                </a>
-                <div class="navbar-dropdown is-boxed">
-                    <a class="navbar-item" href="https://gaia.cs.umass.edu/kurose_ross/eighth.php">
-                        Kurose and Ross Author/Book Page
+    <div class="navbar-end">
+        <div class="navbar-item">
+            <div class="field is-grouped">
+                <p class="control">
+                    <a class="bd-tw-button button" data-social-network="GitHub" data-social-action="_blank" data-social-target="_blank" target="_blank" href="https://github.com/WafflestheChow">
+              <span class="icon">
+                <i class="fab fa-github"></i>
+              </span>
+                        <span>
+                Github
+              </span>
                     </a>
-                    <a class="navbar-item" href="http://w3schools.com">
-                        W3 Schools
+                </p>
+                <p class="control">
+                    <a class="button is-primary" href="https://www.petfinder.com/">
+              <span class="icon">
+                <i class="fas fa-dog"></i>
+              </span>
+                        <span>Adopt a pet</span>
                     </a>
-                    <a class="navbar-item" href="https://www.geeksforgeeks.org/web-development/ ">
-                        GeeksforGeeks
-                    </a>
-                </div>
+                </p>
             </div>
-
-            <div class="navbar-item has-dropdown is-hoverable">
-                <a class="navbar-link" href="#">
-                    Browser Information
-                </a>
-                <div class="navbar-dropdown is-boxed" id="browserDropdown">
-                    <!-- Content will be populated by JavaScript -->
-                </div>
-            </div>
-            <a class="navbar-item" href="aboutme.html">
-                About Me
-            </a>
-
         </div>
     </div>
-
-
+</div>
 </nav>
-
-<
-
 
 <script src="/js/index.js"></script>
 </body>

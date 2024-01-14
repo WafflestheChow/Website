@@ -30,19 +30,29 @@
     height: 34px; /* Height of the switch */
 }
 
+/* Base styles for the switch */
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 60px;
+    height: 34px;
+}
+
+/* Hides the input */
 .switch input {
     opacity: 0;
     width: 0;
     height: 0;
 }
 
+/* Style for the slider */
 .slider {
     position: absolute;
     cursor: pointer;
     top: 0;
+    bottom: 0;
     left: 0;
     right: 0;
-    bottom: 0;
     background-color: #ccc;
     transition: .4s;
     border-radius: 34px;
@@ -60,45 +70,153 @@
     border-radius: 50%;
 }
 
-input:checked + .slider {
-    background-color: #2196F3;
-}
-
-input:checked + .slider:before {
-    transform: translateX(26px);
-}
-
-/* Icon styles */
+/* Positioning the icons */
 .icon {
-    display: none;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
     height: 20px;
     width: 20px;
 }
 
-.light-icon {
-    position: absolute;
-    left: 5px;
-    top: 7px;
+/* Initial visibility of icons */
+.light-mode-icon {
+    left: 8px; /* Position the sun icon inside the slider */
+    display: block; /* Show by default */
 }
 
-.dark-icon {
-    position: absolute;
-    right: 5px;
-    top: 7px;
+.dark-mode-icon {
+    right: 8px; /* Position the moon icon inside the slider */
+    display: none; /* Hide by default */
 }
 
-input:checked + .slider .light-icon {
+/* When the checkbox is checked (dark mode), move the slider to the right */
+input:checked + .slider:before {
+    transform: translateX(26px);
+}
+
+/* When in dark mode, show the white icons and hide the colored ones */
+.dark-mode .light-mode-icon {
     display: none;
 }
 
-input:checked + .slider .dark-icon {
+.dark-mode .dark-mode-icon {
     display: block;
 }
 
-input:not(:checked) + .slider .light-icon {
-    display: block;
+/* Change the background of slider to indicate active state */
+input:checked + .slider {
+    background-color: #555;
 }
 
-input:not(:checked) + .slider .dark-icon {
-    display: none;
+
+/* Style for the icons inside the switch */
+.icon {
+    display: none; /* Hide all icons by default */
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+/* Show appropriate icons for light mode */
+.light-mode-icon {
+    display: block; /* Show */
+    left: 8px; /* Position the sun icon on the left */
+}
+
+/* Hide dark mode icons by default */
+.dark-mode-icon {
+    right: 8px; /* Position the moon icon on the right */
+}
+
+/* When the dark mode is active, switch the icons */
+body.dark-mode .light-mode-icon {
+    display: none; /* Hide the light mode sun icon */
+}
+
+body.dark-mode .dark-mode-icon {
+    display: block; /* Show the dark mode moon icon */
+}
+
+/* Additional styles to make the switch look like a toggle */
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 50px; /* Width of the switch */
+    height: 24px; /* Height of the switch */
+}
+
+.switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: #ccc; /* Background of the slider */
+    transition: 0.4s;
+    border-radius: 34px;
+}
+
+.slider:before {
+    position: absolute;
+    content: "";
+    height: 20px;
+    width: 20px;
+    left: 2px;
+    bottom: 2px;
+    background-color: white;
+    transition: 0.4s;
+    border-radius: 50%;
+}
+
+/* Color changes for the slider when dark mode is active */
+input:checked + .slider {
+    background-color: #555; /* Darker background for the slider */
+}
+
+input:checked + .slider:before {
+    transform: translateX(26px); }/* Move
+
+/* Dark Mode Styles */
+.dark-mode {
+    background-color: #363636;
+    color: #F5F5F5;
+}
+
+.dark-mode .navbar {
+    background-color: #232323;
+}
+
+/* Add more dark mode specific styles */
+
+
+/* Default light mode text color */
+body {
+    color: #363636; /* Dark text for light background */
+}
+
+/* Dark mode specific styles */
+body.dark-mode {
+    color: #FFFFFF; /* White text for dark background */
+}
+
+/* If you have specific elements you want to target, you can do so like this */
+body.dark-mode p,
+body.dark-mode h1,
+body.dark-mode h2,
+body.dark-mode h3,
+body.dark-mode a /* ...etc */ {
+    color: #FFFFFF; /* White text for dark background */
+}
+
+/* You may also need to adjust link colors specifically */
+body.dark-mode a {
+    color: #FFFFFF; /* or any other color you wish */
 }

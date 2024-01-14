@@ -1,25 +1,24 @@
 document.addEventListener('DOMContentLoaded', () => {
+    const body = document.body;
     const themeToggle = document.getElementById('theme-toggle');
-    const lightModeIcons = document.querySelectorAll('.light-mode-icon');
-    const darkModeIcons = document.querySelectorAll('.dark-mode-icon');
 
-    // Set the initial theme on page load
-    if (localStorage.getItem('theme') === 'dark') {
-        document.body.classList.add('dark-mode');
-        lightModeIcons.forEach(icon => icon.style.display = 'none');
-        darkModeIcons.forEach(icon => icon.style.display = 'block');
-    }
-
-    // Toggle the theme and icons on clicking the switch
     themeToggle.addEventListener('change', () => {
-        if (document.body.classList.toggle('dark-mode')) {
-            lightModeIcons.forEach(icon => icon.style.display = 'none');
-            darkModeIcons.forEach(icon => icon.style.display = 'block');
-            localStorage.setItem('theme', 'dark');
-        } else {
-            lightModeIcons.forEach(icon => icon.style.display = 'block');
-            darkModeIcons.forEach(icon => icon.style.display = 'none');
-            localStorage.setItem('theme', 'light');
-        }
+        body.classList.toggle('dark-mode', themeToggle.checked);
+    });
+
+    // Initialize the theme based on user's previous choice or system preference
+    const currentThemePreference = localStorage.getItem('theme') || (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+    if (currentThemePreference === 'dark') {
+        themeToggle.checked = true;
+        body.classList.add('dark-mode');
+    }
+});
+
+document.addEventListener('DOMContentLoaded', () => {
+    // ... existing code ...
+    themeToggle.addEventListener('change', () => {
+        body.classList.toggle('dark-mode', themeToggle.checked);
+        // Save the user's preference in localStorage
+        localStorage.setItem('theme', themeToggle.checked ? 'dark' : 'light');
     });
 });
