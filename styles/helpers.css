@@ -23,6 +23,7 @@
     }
 }
 
+
 .switch {
     position: relative;
     display: inline-block;
@@ -220,3 +221,20 @@ body.dark-mode a /* ...etc */ {
 body.dark-mode a {
     color: #FFFFFF; /* or any other color you wish */
 }
+
+/* Dark Mode Navbar Styles */
+body.dark-mode .navbar-menu,
+body.dark-mode .navbar-item,
+body.dark-mode .navbar-burger span {
+    background-color: #222; /* Or any dark color you prefer */
+    color: #f5f5f5; /* Or any light color you prefer for text/icons */
+}
+
+/* This ensures the navbar-burger (hamburger menu) is visible */
+body.dark-mode .navbar-burger span {
+    background-color: #f5f5f5; /* Light color for the hamburger icon */
+}
+
+/* Adjust navbar dropdown background in dark mode */
+body.dark-mode .navbar-dropdown {
+    background-color: #333;} /* Slightly lighter
